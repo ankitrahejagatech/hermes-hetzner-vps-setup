@@ -2,15 +2,15 @@
 
 This step creates the Hetzner account that will own the VPS.
 
-## 1. Open Hetzner Console
+## 1. Sign Up for Hetzner
 
 Go to:
 
 ```text
-https://console.hetzner.com/
+https://accounts.hetzner.com/signUp
 ```
 
-Choose sign up / register, then create a new account with the email address that should own the infrastructure.
+Create a new Hetzner account with the email address that should own the infrastructure.
 
 ## 2. Verify the Account
 
@@ -82,4 +82,3 @@ Only paste the `.pub` public key into Hetzner. Never paste the private key.
 You are ready to create the VPS.
 
 Next: [Create a Cloud project and VPS](02-create-vps.md)
-
