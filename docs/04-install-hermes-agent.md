@@ -43,13 +43,25 @@ hermes doctor
 hermes setup
 ```
 
-When the setup wizard asks you to choose a model, select:
+When the setup wizard asks you to choose a model, use this path:
 
 ```text
-codex
+OpenAI -> Codex -> Authenticate -> gpt 5.4 mini
 ```
 
-Continue through the setup prompts and add the required API key or provider credentials.
+![Hermes setup model selection](../assets/model-selection-openai-codex.svg)
+
+Select:
+
+```text
+gpt 5.4 mini
+```
+
+This is good for very low usage.
+
+Later, you can tell Hermes directly in Telegram to change the model to another GPT model in a new session.
+
+Continue through the setup prompts and finish authentication.
 
 ## 5. Set Approval Mode
 
