@@ -41,10 +41,10 @@ CX33
 6. Add the SSH key created in step 01.
 7. Enable IPv4 and IPv6.
 8. Enable backups if this is production.
-9. Name the server. In this setup we used:
+9. Name the server something easy to recognize, for example:
 
 ```text
-ubuntu-8gb-hel1-2
+hermes-agent
 ```
 
 10. Create the server.

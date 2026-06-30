@@ -25,7 +25,6 @@ For this setup, we used a cost-optimized Hetzner Cloud plan:
 - Architecture: x86
 - Plan: CX33
 - Location: Helsinki, Finland (`hel1`)
-- Server name used in this setup: `ubuntu-8gb-hel1-2`
 - Access: SSH key only
 
 ## Setup Flow
@@ -65,7 +64,6 @@ Fill these in privately while following the guide:
 ```text
 Hetzner account email:
 Hetzner project name:
-Server name:
 Server public IPv4:
 Server public IPv6:
 SSH username:
