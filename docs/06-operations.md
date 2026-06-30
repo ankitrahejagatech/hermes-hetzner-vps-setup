@@ -84,7 +84,7 @@ For production:
 - Check the Hetzner firewall allows port 22 from your current IP.
 - Check the server is powered on.
 - Check you are using the correct SSH key.
-- Try `ssh -v hermes@<your-server-ip>` for verbose output.
+- From your own local machine, try `ssh -v hermes@<your-server-ip>` for verbose output.
 
 ### Service starts then exits
 

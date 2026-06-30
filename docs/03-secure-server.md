@@ -4,7 +4,7 @@ This step creates a non-root user, configures SSH, and installs basic security t
 
 ## 1. Create a Deploy User
 
-SSH into the server as root:
+From your own local machine, SSH into the server as root:
 
 ```bash
 ssh root@<your-server-ip>
@@ -23,7 +23,7 @@ Copy SSH access from root to the new user:
 rsync --archive --chown=hermes:hermes ~/.ssh /home/hermes
 ```
 
-Test the new login from your local machine:
+Open a second local terminal window and test the new login:
 
 ```bash
 ssh hermes@<your-server-ip>
@@ -75,7 +75,7 @@ sudo sshd -t
 sudo systemctl restart ssh
 ```
 
-Before closing the root SSH session, open a second terminal and confirm this works:
+Before closing the root SSH session, open a second local terminal window and confirm this works:
 
 ```bash
 ssh hermes@<your-server-ip>
@@ -100,4 +100,3 @@ timedatectl
 ```
 
 Next: [Install Hermes agent](04-install-hermes-agent.md)
-

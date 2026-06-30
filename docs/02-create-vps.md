@@ -72,9 +72,9 @@ Record it privately:
 HERMES_SERVER_IP=<your-server-ip>
 ```
 
-## 5. Connect Over SSH
+## 5. Connect Over SSH From Your Local Machine
 
-From your local machine:
+After Hetzner creates the server, do not use the Hetzner web console for normal setup. Open Terminal on your own local machine and SSH into the VPS:
 
 ```bash
 ssh root@<your-server-ip>
@@ -96,7 +96,7 @@ apt install -y curl git ufw
 reboot
 ```
 
-Reconnect after the reboot:
+Reconnect from your local machine after the reboot:
 
 ```bash
 ssh root@<your-server-ip>

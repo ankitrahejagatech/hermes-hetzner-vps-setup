@@ -8,7 +8,7 @@ The install command follows the community guide:
 https://www.reddit.com/r/hermesagent/comments/1t2raft/complete_guide_how_to_host_hermes_agent_on_a/
 ```
 
-## 1. SSH Into the Server
+## 1. SSH Into the Server From Your Local Machine
 
 ```bash
 ssh hermes@<your-server-ip>
