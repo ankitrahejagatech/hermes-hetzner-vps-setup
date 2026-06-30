@@ -73,7 +73,7 @@ In Hetzner Console:
 2. Go to Security.
 3. Go to SSH Keys.
 4. Add the public key.
-5. Give it a recognizable name, such as `ankit-laptop`.
+5. Give it a recognizable name, such as `workstation-ssh-key`.
 
 Only paste the `.pub` public key into Hetzner. Never paste the private key.
 
