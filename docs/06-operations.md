@@ -1,28 +1,28 @@
 # 06. Operations and Troubleshooting
 
-Use this page after Hermes is installed.
+Use this page after Hermes Agent and Telegram gateway are installed.
 
 ## Common Commands
 
-Check service status:
+Check gateway status:
 
 ```bash
 systemctl --user status hermes-gateway
 ```
 
-Start service:
+Start gateway:
 
 ```bash
 systemctl --user start hermes-gateway
 ```
 
-Stop service:
+Stop gateway:
 
 ```bash
 systemctl --user stop hermes-gateway
 ```
 
-Restart service:
+Restart gateway:
 
 ```bash
 systemctl --user restart hermes-gateway
@@ -37,12 +37,10 @@ journalctl --user -u hermes-gateway -f
 Show recent logs:
 
 ```bash
-journalctl --user -u hermes-gateway -n 200 --no-pager
+journalctl --user -u hermes-gateway -n 100 --no-pager
 ```
 
 ## Update Hermes
-
-Before updating, make a backup:
 
 ```bash
 hermes backup
@@ -52,75 +50,52 @@ hermes doctor
 systemctl --user restart hermes-gateway
 ```
 
-## Check Disk and Memory
+## Check the Server
 
 ```bash
 df -h
 free -h
-htop
+uptime
 ```
 
-## Check Network
+## SSH Troubleshooting
+
+From your own local machine:
 
 ```bash
-curl -4 ifconfig.me
-curl -6 ifconfig.me
-sudo ufw status verbose
+ssh -v root@<your-server-ip>
 ```
 
-## Backup Notes
+Check:
 
-For production:
+- The server is powered on in Hetzner.
+- You are using the right public IP.
+- Your SSH key was added when the server was created.
+- Port 22 is allowed by the firewall.
 
-1. Enable Hetzner backups or scheduled snapshots.
-2. Back up `~/.hermes/.env` securely.
-3. Run `hermes backup` regularly.
-4. Never store backups in a public GitHub repository.
-
-## Troubleshooting
-
-### SSH does not connect
-
-- Check the Hetzner firewall allows port 22 from your current IP.
-- Check the server is powered on.
-- Check you are using the correct SSH key.
-- From your own local machine, try `ssh -v hermes@<your-server-ip>` for verbose output.
-
-### Service starts then exits
+## Hermes Troubleshooting
 
 Run:
 
 ```bash
-journalctl --user -u hermes-gateway -n 200 --no-pager
+hermes doctor
 ```
 
-Look for:
-
-- Missing environment variables.
-- Missing runtime dependency.
-- Wrong `WorkingDirectory`.
-- Wrong `ExecStart`.
-- Permission errors.
-
-### Environment variables are not loading
-
-Check:
+Check logs:
 
 ```bash
-ls -l ~/.hermes/.env
-cat ~/.hermes/.env
+journalctl --user -u hermes-gateway -n 100 --no-pager
 ```
 
-### Server needs more resources
-
-In Hetzner Console, use the server rescale option. Stop the Hermes service before resizing if the workload is sensitive:
+Check env values:
 
 ```bash
-systemctl --user stop hermes-gateway
+nano ~/.hermes/.env
 ```
 
-After resizing:
+Restart after changes:
 
 ```bash
-systemctl --user start hermes-gateway
+systemctl --user restart hermes-gateway
 ```
+

@@ -32,9 +32,9 @@ For this setup, we used a cost-optimized Hetzner Cloud plan:
 0. [Current setup notes](docs/00-current-setup.md)
 1. [Create a Hetzner account](docs/01-hetzner-account.md)
 2. [Create a Cloud project and VPS](docs/02-create-vps.md)
-3. [Secure the server](docs/03-secure-server.md)
+3. [SSH and prepare the VPS](docs/03-ssh-and-prepare-vps.md)
 4. [Install Hermes Agent](docs/04-install-hermes-agent.md)
-5. [Run Hermes persistently](docs/05-systemd-service.md)
+5. [Set up Telegram and Gateway](docs/05-telegram-and-gateway.md)
 6. [Operate and troubleshoot](docs/06-operations.md)
 
 ## Folder Layout
@@ -48,9 +48,9 @@ For this setup, we used a cost-optimized Hetzner Cloud plan:
 │   ├── 01-hetzner-account.md
 │   ├── 00-current-setup.md
 │   ├── 02-create-vps.md
-│   ├── 03-secure-server.md
+│   ├── 03-ssh-and-prepare-vps.md
 │   ├── 04-install-hermes-agent.md
-│   ├── 05-systemd-service.md
+│   ├── 05-telegram-and-gateway.md
 │   └── 06-operations.md
 └── scripts/
     ├── check-server.sh

@@ -102,4 +102,4 @@ Reconnect from your local machine after the reboot:
 ssh root@<your-server-ip>
 ```
 
-Next: [Secure the server](03-secure-server.md)
+Next: [SSH and prepare the VPS](03-ssh-and-prepare-vps.md)

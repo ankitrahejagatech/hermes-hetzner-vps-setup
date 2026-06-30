@@ -1,81 +1,62 @@
 # 04. Install Hermes Agent
 
-This step installs Hermes Agent on the VPS.
+This section follows the Hermes Agent VPS guide after the Hetzner VPS is ready.
 
-The install command follows the community guide:
+Source guide:
 
 ```text
 https://www.reddit.com/r/hermesagent/comments/1t2raft/complete_guide_how_to_host_hermes_agent_on_a/
 ```
 
-## 1. SSH Into the Server From Your Local Machine
-
-```bash
-ssh hermes@<your-server-ip>
-```
-
-## 2. Run the Official Installer
+## 1. Run the Installer
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
-Reload your shell:
+## 2. Reload the Shell
 
 ```bash
 source ~/.bashrc
 ```
 
-## 3. Verify Hermes
+If `hermes` is still not found, close the SSH session and reconnect:
+
+```bash
+exit
+ssh root@<your-server-ip>
+```
+
+## 3. Verify the Install
 
 ```bash
 hermes --version
+```
+
+```bash
 hermes doctor
 ```
 
-## 4. Run Setup
-
-Run:
+## 4. Run Hermes Setup
 
 ```bash
 hermes setup
 ```
 
-Use the setup wizard to configure your LLM provider and API key.
+When the setup wizard asks you to choose a model, select:
 
-For VPS safety, set approval mode to ask:
+```text
+codex
+```
+
+Continue through the setup prompts and add the required API key or provider credentials.
+
+## 5. Set Approval Mode
+
+For a VPS setup, use ask mode:
 
 ```bash
 hermes config set approval_mode ask
 ```
 
-## 5. Add Telegram
-
-If you want to use Hermes from your phone:
-
-1. In Telegram, message `@BotFather`.
-2. Create a bot with `/newbot`.
-3. Save the bot token privately.
-4. Message `@userinfobot`.
-5. Save your numeric Telegram user ID.
-
-Edit Hermes env:
-
-```bash
-nano ~/.hermes/.env
-```
-
-Add:
-
-```text
-TELEGRAM_BOT_TOKEN=your_token_here
-TELEGRAM_ALLOWED_USERS=your_numeric_user_id_here
-```
-
-Lock the file:
-
-```bash
-chmod 600 ~/.hermes/.env
-```
-
-Next: [Run Hermes persistently](05-systemd-service.md)
+Next: [Set up Telegram and Gateway](05-telegram-and-gateway.md)
