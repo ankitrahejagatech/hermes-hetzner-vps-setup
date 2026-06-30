@@ -1,0 +1,12 @@
+.env
+*.env
+id_rsa
+id_rsa.pub
+id_ed25519
+*.pem
+*.key
+*.log
+node_modules/
+__pycache__/
+.DS_Store
+
