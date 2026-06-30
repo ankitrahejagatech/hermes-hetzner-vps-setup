@@ -44,8 +44,6 @@ For this setup, we used a cost-optimized Hetzner Cloud plan:
 ├── README.md
 ├── config-examples/
 │   └── hermes.env.example
-├── assets/
-│   └── model-selection-openai-codex.svg
 ├── docs/
 │   ├── 01-hetzner-account.md
 │   ├── 00-current-setup.md

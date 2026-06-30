@@ -57,8 +57,6 @@ When the setup wizard asks you to choose a model, use this path:
 OpenAI -> Codex -> Authenticate -> gpt 5.4 mini
 ```
 
-![Hermes setup model selection](../assets/model-selection-openai-codex.svg)
-
 Select:
 
 ```text
