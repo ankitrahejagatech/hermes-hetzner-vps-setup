@@ -43,6 +43,14 @@ hermes doctor
 hermes setup
 ```
 
+When the setup wizard asks how to run Hermes, select:
+
+```text
+local
+```
+
+Do not select Docker for this setup. Your mileage may vary.
+
 When the setup wizard asks you to choose a model, use this path:
 
 ```text
